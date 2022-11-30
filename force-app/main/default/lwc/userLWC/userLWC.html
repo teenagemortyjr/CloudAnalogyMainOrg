@@ -1,0 +1,69 @@
+<template>
+<div class="mainDiv">
+   
+
+
+
+<div class="combobox-1">
+    <h1>From</h1>
+    <lightning-combobox     
+    name="progress"
+    label="User Name"
+    value={selectedUserNameFromCombobox1}
+    placeholder="Select User"
+    required="true"
+    options={userNameList}
+    onchange={onCombobox1Click}>
+</lightning-combobox>
+
+
+<div style="height: 300px;">
+    <lightning-datatable
+            key-field="id"
+            data={user1Detail}
+            columns={columns}>
+    </lightning-datatable>
+</div>
+
+</div>
+
+
+<br>
+<br>
+
+<div class="combobox-2">
+    <h1>To</h1>
+
+<lightning-combobox
+name="progress"
+label="User Name"
+value={selectedUserNameFromCombobox2}
+placeholder="Select user"
+required="true"
+options={userNameList}
+onchange={onCombobox2Click}>
+</lightning-combobox>
+
+
+<div style="height: 300px;">
+    <lightning-datatable
+            key-field="id"
+            data={user1Detail}
+            columns={columns}>
+    </lightning-datatable>
+</div>
+
+
+</div>
+
+
+   
+  
+
+
+
+<div class="tps-btn">
+    <lightning-button variant="brand" label="Transfer permission Set" title="Primary action" onclick={onTransferPermissionSetClick} class="slds-m-left_x-small"></lightning-button>
+</div>
+</div>
+</template>
